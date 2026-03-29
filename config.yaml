@@ -1,0 +1,23 @@
+# ── 시각화 모드 ──
+# "pcd"       : 포인트클라우드만 (흰색)
+# "gt"        : GT 라벨 색상
+# "pred"      : 예측 라벨 색상
+# "confusion" : GT vs Pred confusion matrix 색상
+# "feature"   : 딥러닝 피쳐맵 viridis 히트맵
+mode: pred
+
+# ── 경로 설정 ──
+pcds_dir: "D:/ALL_DATASETS/autonomous_driving/KITTI/dataset/sequences/21/velodyne"
+gts_dir: "D:/ALL_DATASETS/autonomous_driving/KITTI/dataset/sequences/21/labels"
+preds_dir: "C:/Users/Minjae/Downloads/sequences/21/predictions"
+imgs_dir: "D:/ALL_DATASETS/autonomous_driving/KITTI/dataset/sequences/21/image_2"  # 빈 문자열이면 비활성
+npy_file: ""  # feature 모드 전용
+
+# ── 공통 옵션 ──
+idx: 0
+json_path: ""
+range_crop: [2.0, 50.0]
+flatten_2d: false
+
+# ── feature 모드 정규화 ──
+npy_norm: percentile  # minmax | sigmoid | percentile

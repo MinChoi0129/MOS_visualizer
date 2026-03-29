@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mos-visualizer"
+version = "0.1.0"
+description = "MOS point cloud visualizer with Open3D"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "open3d",
+    "opencv-python",
+    "matplotlib",
+    "pyyaml",
+]
+
+[project.scripts]
+mos-vis = "mos_visualizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
